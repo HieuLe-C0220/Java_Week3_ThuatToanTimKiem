@@ -7,11 +7,11 @@ public class FindStringlengthMax {
         System.out.print("Enter a string: ");
         String string = scanner.nextLine();
         LinkedList<Character> max = new LinkedList<>();
-        // Find the maximum increasingly ordered subsequence
+        // Tìm thứ tự ngày càng tối đa
         for (int i=0;i<string.length();i++) {
             LinkedList<Character> list = new LinkedList<>();
             list.add(string.charAt(i));
-            for (int j=i+1;j<string.length();i++) {
+            for (int j=i+1;j<string.length();j++) {
                 if (string.charAt(j)>list.getLast()) {
                     list.add(string.charAt(j));
                 }
